@@ -27,24 +27,35 @@
     }
   }
 
-
+  const currentYear = new Date().getFullYear();
   
-  var countDownDate = new Date("Oct 11, 2019 00:00:00").getTime();
+  let countDownDate = new Date(`Oct 11, ${currentYear} 00:00:00`).getTime();
+  // year.innerText = currentYear + 1;
+
+  function calculate_age(dob) { 
+    var diff = Date.now() - dob.getTime();
+    var ageDate = new Date(diff); 
+  
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+document.getElementById('age').innerHTML = calculate_age(new Date(2008, 10, 11));
+
 
   // Update the count down every 1 second
-  var x = setInterval(function() {
+  const x = setInterval(function() {
 
   // Get today's date and time
-  var now = new Date().getTime();
+  let now = new Date().getTime();
     
   // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  let distance = countDownDate - now;
     
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
@@ -77,13 +88,13 @@
 
 
 //Fade in dashboard box
-$(document).ready(function(){
-    $('.box').hide().fadeIn(1000);
-    });
+// $(document).ready(function(){
+//     $('.box').hide().fadeIn(1000);
+//     });
 
 //Stop click event
-$('a').click(function(event){
-    event.preventDefault(); 
-    });
+// $('a').click(function(event){
+//     event.preventDefault(); 
+//     });
     
 

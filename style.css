@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 #page1, body{
     font-family: 'Open Sans', sans-serif;
     background:#454140;
@@ -99,82 +103,186 @@
   background:#3594D2; 
   }*/
 
+  #page2, body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+  }
+
+  #page2 header{
+    width: 100vw;
+  }
+
+  /* #page2, header{
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+    position: absolute; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* min-height: 100vh; */
+  /* } */
+
   #page2, #bkgImg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url(bday.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url(IMG_4702.JPG);
+    background-image: no-repeat;
     background-size: cover;
     height: 100%;
   }
 
-  #page2 p {
+  /* #page2 p {
     font-size: 20px;
     text-align: right;
     padding: 40px;
-  }
+    right: 10px;
+  } */
 
   #page2 #demo{
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
     color: white;
-    padding: 1px;
+    position: relative;
+    bottom: 60px;
+    /* padding: 1px; */
   }
 
   #page2 #daysLeft{
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
     color: white;
-    margin-top: 80px;
-    padding: 1px;
+    /* bottom: 4px; */
+    position: relative;
+    /* padding: 40px; */
+  }
+
+  #page2 .dyk{
+    position: absolute;
+    right: 100px;
+    bottom: 130px;
+    transform: rotate(-20deg);
+    font-family: Mountains of Christmas, serif;
+    font-size: 28px;
+    color: white;
   }
 
   
 
   #page2 h1{
-    color: teal;
+    color: rgb(3, 182, 182);
     text-align: center;
     font-size: 120px;
     /*border-top: 1px solid teal;*/
     font-family: Mountains of Christmas, serif;
     width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+    z-index: 10;
   }
 
   #page2 .bkHome{
-    color: teal;
+    color: rgb(3, 182, 182);
     text-decoration: none;
-    margin-left: 10px;
-    margin-top: 10px;
+    
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
   }
 
   #page2 #pass2{
-    border-radius: 10px;
-    width: 40%;
-    height: 50px;
-    font-size: 40px;
+    font-size: 2em;
     text-align: center;
-    position: absolute;
-    transform: translate(-50%, -100%);
+  }
+
+  #page2 .email{
+    border-radius: 10px;
+    width: 60%;
+    /* height: 50px; */
+    /* font-size: 1.5em; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* min-height: 100vh; */
+    position: relative;
+    /* transform: translateX(-50%); */
   }
 
   #page2 .btn2{
+    cursor: pointer;
     border-radius: 10px;
     height: 50px;
-    padding: 1px 20px;
-    margin: 20px;
-    font-size: 40px;
-    position: absolute;
-    transform: translate(-50%, -90%);
+    padding: 0 20px;
+    /* margin: 20px; */
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* transform: translateX(-50%); */
     text-align: center;
+    background-color:rgb(3, 182, 182);
+    outline: none;
+    bottom: 10px;
+  }
+
+  #page2 .btn2:hover{
+    /* cursor: pointer; */
     background-color: darkcyan;
     
   }
 
-  #page2 .dyk{
-    font-family: Mountains of Christmas, serif;
-    font-size: 30px;
-    color: white;
+  #age{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    top: 2px;
+    left: 50%;
+    font-size: 360px;
+    color: #fff;
+    transform: translateX(-50%)
   }
 
 
+  @media screen and (max-width: 500px){ 
+      #page2 #pass2{
+        font-size: 1em;
+        padding: 10px;
+        width: 80%;
+      }
 
+    }
+
+
+
+
+/* 
+    #page2 h1{
+    padding: 30px;
+    font-size: 30px;
+    }
+
+    #page2 .btn2{
+      font-size: 1rem;
+    }
+
+    #page2 
+  } */ 
+
+  
+  @media screen and (max-width: 1100px){
+    #page2 .dyk{
+      display: none;
+    }
+    #page2 #pass2{
+      font-size: 1.6em;
+      padding: 10px;
+      width: 80%;
+    }
+  }
 
   @media screen and (orientation: portrait){
       .box {max-width: 90%;}
